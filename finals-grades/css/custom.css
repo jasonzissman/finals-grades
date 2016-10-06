@@ -1,0 +1,13 @@
+body {
+	font-size: xx-large;
+}
+.fields .field {
+	margin: 2em 0em;
+}
+.fields .field  input{
+	width: 100%;
+	max-width: 400px;
+}
+#needed-grade {
+	font-size: 100px;
+}

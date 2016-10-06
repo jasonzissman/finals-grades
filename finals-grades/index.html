@@ -1,23 +1,36 @@
 <html>
-	<head>
+	<head>	
 		<title>Finals Grade Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
 	</head>
 	<body>
-		<label>What's your current grade?</label>
-		<input id="current-grade" type="number" value="90"></input><br/>
-		
-		<label>What's your target grade for the class?</label>
-		<input id="target-grade" type="number" value="90"></input><br/>
-		
-		<label>What percentage of your class grade is your final exam worth?</label>
-		<input id="final-weight" type="number" value="20"></input><br/>		
-		
-		<hr/>
-		
-		<label>You need a <span id="needed-grade"></span> on your 
-		final exam to achieve a final class grade of
-		<span id="target-grade-message"></span>.
-		
+		<div class="container">
+			<div class="fields">
+				<div class="field">
+					<label>What's your current grade?</label><br/>
+					<input id="current-grade" type="number" value="90"></input>					
+				</div>
+				
+				<div class="field">
+					<label>What's your target grade for the class?</label><br/>
+					<input id="target-grade" type="number" value="90"></input>
+				</div>
+				
+				<div class="field">
+					<label>What percentage of your class grade is your final exam worth?</label><br/>
+					<input id="final-weight" type="number" value="20"></input>
+				</div>
+				
+				<hr/>
+				
+				<label>You need a <br/>
+				<span id="needed-grade"></span> <br/>
+				on your final exam to achieve a final class grade of
+				<span id="target-grade-message"></span>.						
+			</div>
+		</div>
 		
 		<script type="text/javascript">	
 
