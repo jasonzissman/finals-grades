@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Finals Grade Calculator</title>
+	</head>
+	<body>
+		<label>What's your current grade?</label>
+		<input id="current-grade" type="number" value="90"></input><br/>
+		
+		<label>What's your target grade for the class?</label>
+		<input id="target-grade" type="number" value="90"></input><br/>
+		
+		<label>What percentage of your class grade is your final exam worth?</label>
+		<input id="final-weight" type="number" value="20"></input><br/>		
+		
+		<hr/>
+		
+		<label>You need a <span id="needed-grade"></span> on your 
+		final exam to achieve a final class grade of
+		<span id="target-grade-message"></span>.
+		
+		
+		<script type="text/javascript">	
+
+			var calculateNeededGrade = function(currentGrade, targetGrade, finalWeight) {
+				var finalWeightPercent = finalWeight/100;
+				var nonFinalWeightPercent = 1-finalWeightPercent;
+				return (targetGrade/finalWeightPercent) - nonFinalWeightPercent *(currentGrade/finalWeightPercent)
+			};
+			
+			var callFunction = function() {
+				var currentGrade = document.getElementById('current-grade').value;
+				var targetGrade = document.getElementById('target-grade').value;
+				var finalWeight = document.getElementById('final-weight').value;
+				var neededFinalExamGrade = calculateNeededGrade(currentGrade, targetGrade, finalWeight);
+				document.getElementById('needed-grade').innerHTML = neededFinalExamGrade;
+				document.getElementById('target-grade-message').innerHTML = targetGrade;
+			}
+		
+			document.onkeyup = function() {
+				callFunction();
+			};
+			callFunction();
+			
+		</script>
+	</body>
+</html>

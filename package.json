@@ -1,0 +1,14 @@
+{
+  "name": "finals-grade",
+  "version": "0.0.1",
+  "description": "Simple tool to determine grade needed on final exam to pass a class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Zissman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
